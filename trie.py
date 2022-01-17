@@ -46,12 +46,12 @@ class trie:
                     last_node +=1 
 
 
-
 def main():
     '''
     tests    
     '''
-    T = trie(["he", "she", "his", "hers"])
+    T = trie(["ABC", "ABABABA", "BABABABA", "CACACA", "ABACA", "CACB"])
+    #T = trie(["he", "she", "his", "hers"])
     pos = graphviz_layout(T.G, prog="dot")
     edge_lbls = dict([((n1, n2), d['letter']) for n1, n2, d in T.G.edges(data=True)])
     labels = nx.get_node_attributes(T.G, 'terminal')
